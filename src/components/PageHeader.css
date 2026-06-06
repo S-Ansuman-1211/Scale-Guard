@@ -1,0 +1,20 @@
+.page-header {
+  padding: 72px 0 0;
+}
+
+.page-header__title {
+  max-width: 18ch;
+}
+
+.page-header__lead {
+  margin-top: 22px;
+}
+
+.page-header__rule {
+  margin-top: 48px;
+}
+
+@media (max-width: 720px) {
+  .page-header { padding: 48px 0 0; }
+  .page-header__title { max-width: none; }
+}

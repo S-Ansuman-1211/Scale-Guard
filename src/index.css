@@ -1,0 +1,269 @@
+/* ============================================================
+   ScaleGuard Technologies — Industrial Design System
+   Colors unchanged. Structure, type & detailing upgraded.
+   ============================================================ */
+
+:root {
+  /* Palette (unchanged) */
+  --navy-900: #0a1730;
+  --navy-800: #0d1f3c;
+  --navy-700: #112a52;
+  --navy-600: #1a3463;
+  --ink: #16243f;
+  --ink-soft: #2c3e5c;
+  --slate: #5a6b85;
+  --slate-light: #8090a8;
+  --steel: #3a6ea5;
+  --steel-dark: #2c587f;
+  --line: #d9e0ea;
+  --line-soft: #e8edf3;
+  --paper: #f4f6f9;
+  --paper-2: #eef2f7;
+  --white: #ffffff;
+  --green: #2f7d5b;
+
+  /* Type */
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', 'Consolas', monospace;
+
+  /* Layout */
+  --maxw: 1240px;
+  --gutter: 40px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 0;
+  letter-spacing: -0.012em;
+}
+
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: var(--sans); cursor: pointer; }
+ul { margin: 0; }
+
+/* ---------- Layout helpers ---------- */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  width: 100%;
+}
+
+.section { padding: 88px 0; }
+.section--tight { padding: 60px 0; }
+.section--paper { background: var(--paper); }
+.section--paper2 { background: var(--paper-2); }
+
+.section--navy {
+  background: var(--navy-800);
+  color: var(--white);
+  position: relative;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.rule { height: 1px; background: var(--line); border: 0; margin: 0; }
+
+/* ---------- Eyebrow (technical label with tick) ---------- */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--steel);
+  flex-shrink: 0;
+}
+
+.eyebrow--muted { color: var(--slate-light); }
+.eyebrow--muted::before { background: var(--slate-light); }
+
+/* ---------- Display headings ---------- */
+.display {
+  font-size: clamp(2.1rem, 5vw, 3.7rem);
+  line-height: 1.06;
+}
+
+.display em { font-style: italic; color: var(--steel); }
+
+.h-section { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+
+.lead {
+  font-size: 1.06rem;
+  color: var(--slate);
+  max-width: 58ch;
+  line-height: 1.72;
+}
+
+.text-steel { color: var(--steel); }
+.text-slate { color: var(--slate); }
+
+/* ---------- Buttons (industrial) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+  line-height: 1;
+}
+
+.btn--primary {
+  background: var(--navy-800);
+  color: var(--white);
+  border-color: var(--navy-800);
+}
+.btn--primary:hover { background: var(--navy-700); border-color: var(--navy-700); }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn--ghost:hover { border-color: var(--ink); }
+
+.btn--light {
+  background: var(--white);
+  color: var(--navy-800);
+  border-color: var(--white);
+}
+
+.btn--block { width: 100%; }
+
+/* ---------- Registration corner ticks (engineering detail) ---------- */
+.ticks { position: relative; }
+.ticks::before,
+.ticks::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+.ticks::before {
+  top: -1px; left: -1px;
+  border-top: 1px solid var(--steel);
+  border-left: 1px solid var(--steel);
+}
+.ticks::after {
+  bottom: -1px; right: -1px;
+  border-bottom: 1px solid var(--steel);
+  border-right: 1px solid var(--steel);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 30px;
+}
+
+.card__num { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--steel); }
+
+/* ---------- Grid utils ---------- */
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.muted { color: var(--slate); }
+.small { font-size: 0.85rem; }
+.center { text-align: center; }
+
+/* ---------- Tables (technical spec sheet) ---------- */
+.table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+
+.table th {
+  text-align: left;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--ink-soft);
+  vertical-align: top;
+}
+
+.table tbody tr:last-child td { border-bottom: 0; }
+.table tbody tr:hover { background: var(--paper); }
+
+.table .pos { color: var(--steel); font-weight: 600; }
+.table .neg { color: var(--slate); }
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.6s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) { :root { --gutter: 32px; } }
+
+@media (max-width: 960px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .section { padding: 60px 0; }
+  .section--tight { padding: 44px 0; }
+  :root { --gutter: 20px; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .lead { font-size: 1rem; }
+}
