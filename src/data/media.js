@@ -7,8 +7,8 @@
    ============================================================ */
 
 export const IMG = {
-  coolingTowers: '/images/cooling-towers.jpg', // Home hero
+  coolingTowers: '/images/landing-page.jpg',   // Home hero
   valve: '/images/valve.jpg',                  // Home case study + How It Works
   building: '/images/building.jpg',            // About approach
-  diagram: '/images/nano-diagram.png',         // optional science diagram
+  diagram: '/images/Media.jpg',                // science / adsorption diagram
 }

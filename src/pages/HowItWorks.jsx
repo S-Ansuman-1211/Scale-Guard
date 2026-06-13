@@ -3,6 +3,7 @@ import Figure from '../components/Figure'
 import { IMG } from '../data/media'
 import { PROCESS_STAGES, PROCESS_STEPS } from '../data/content'
 import './pages.css'
+import './HowItWorks.css'
 
 export default function HowItWorks() {
   return (
@@ -46,12 +47,12 @@ export default function HowItWorks() {
 
       {/* The science (for consultants) */}
       <section className="section">
-        <div className="container split split--center">
+        <div className="container split">
+          <div>
+            <p className="eyebrow">The Science Behind ScaleGuard</p>
+            <h2 className="h-section">Crystal nucleation within the flowing water stream.</h2>
+          </div>
           <div className="stack">
-            <div>
-              <p className="eyebrow">The Science Behind ScaleGuard</p>
-              <h2 className="h-section">Crystal nucleation within the flowing water stream.</h2>
-            </div>
             <p className="muted">
               ScaleGuard promotes crystal nucleation within the flowing water stream, encouraging
               hardness minerals to form microscopic suspended particles rather than adhering to
@@ -63,12 +64,41 @@ export default function HowItWorks() {
               cleaner without chemical dosing.
             </p>
           </div>
-          <Figure
-            src={IMG.diagram}
-            alt="Micro/nano-scale crystal conditioning principle"
-            ratio="1 / 1"
-            caption="Conditioning influences mineral behaviour at the micro/nano scale within the flowing stream."
-          />
+        </div>
+      </section>
+
+      {/* Mechanism diagram */}
+      <section className="section--paper section">
+        <div className="container">
+          <p className="eyebrow">Conditioning Mechanism</p>
+          <h2 className="h-section sec-head">How conditioning influences mineral behaviour.</h2>
+          <div className="hiw-diagram">
+            <Figure
+              src={IMG.diagram}
+              alt="Adsorption and surface-conditioning mechanism at the micro/nano scale"
+              contain
+              ratio="1 / 1"
+              className="hiw-diagram__fig"
+            />
+            <div className="hiw-diagram__notes">
+              <p className="muted">
+                At the micro/nano scale, conditioned interactions encourage dissolved ions and fine
+                particles to associate within the bulk water rather than deposit on heat-transfer
+                surfaces. The principal interactions illustrated:
+              </p>
+              <ul className="ticklist">
+                <li><strong>Adsorption</strong> — particles gather within the flowing stream</li>
+                <li><strong>Chemisorption</strong> — surface binding of metal cations (M⁺)</li>
+                <li><strong>H-bonding</strong> — association with organic species</li>
+                <li><strong>Electrostatic attraction</strong> — charge-driven capture</li>
+                <li><strong>Ion exchange</strong> — exchange involving metal anions (M⁻)</li>
+              </ul>
+              <p className="small muted">
+                Illustrative mechanism only. ScaleGuard is a passive physical conditioning device —
+                not a chemical dosing system.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

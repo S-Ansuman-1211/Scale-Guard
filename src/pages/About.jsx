@@ -75,8 +75,10 @@ export default function About() {
           <div style={{ marginTop: 48 }}>
             <p className="eyebrow">Institutional Experience</p>
             <p className="lead text-steel">
-              Installations completed at Parliament House, Prime Minister's Office, Supreme Court,
-              AIIMS hospital, IIT campuses, and other critical facilities across India.
+              35+ years delivering non-chemical water treatment to government, defence, healthcare,
+              education and railway sectors — including installations at Parliament House, the
+              Prime Minister's Office, Supreme Court, AIIMS, Nanavati Hospital, IIT campuses,
+              Indian Railways establishments, and defence facilities across India.
             </p>
           </div>
         </div>

@@ -1,15 +1,33 @@
+import { Link } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
-import { CONSULTANT_BLOCKS, KEY_PARAMETERS } from '../data/content'
+import { CONSULTANT_BLOCKS, CONSULTANT_RESOURCES, KEY_PARAMETERS } from '../data/content'
 import './pages.css'
 
 export default function Consultants() {
   return (
     <div>
       <PageHeader
-        eyebrow="Consultant & Tender Support"
+        eyebrow="For Consultants"
         title="Specifications, sizing, and CPWD/PWD documentation — handled."
         lead="Detailed technical specifications, sizing assistance, CPWD/PWD documentation support, installation guidelines, and on-site coordination provided for consultants, contractors, and government officers."
       />
+
+      {/* Resources */}
+      <section className="section--paper section--tight">
+        <div className="container">
+          <p className="eyebrow">Resources</p>
+          <h2 className="h-section sec-head">Consultant Resources</h2>
+          <div className="listcards">
+            {CONSULTANT_RESOURCES.map((r) => (
+              <div className="listcard" key={r.title}>
+                <h3 className="listcard__title">{r.title}</h3>
+                <p className="muted small" style={{ marginBottom: 14 }}>{r.note}</p>
+                <Link to={r.to} className="text-steel small">{r.cta} →</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Support blocks */}
       <section className="section">

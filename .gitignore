@@ -11,3 +11,4 @@ dist-ssr
 # Local media / scratch (not part of the app)
 *.mp4
 frames/
+/New folder/

@@ -18,6 +18,20 @@
   object-fit: cover;
 }
 
+/* Contain variant — full diagram on a light panel, no crop */
+.figure__frame--contain {
+  background: var(--white);
+  padding: 28px;
+}
+.figure__frame--contain img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.figure__frame--contain::before { border-color: rgba(58, 110, 165, 0.45); }
+.figure__frame--contain::after { border-color: rgba(58, 110, 165, 0.45); }
+
 /* Engineering registration ticks at corners */
 .figure__frame::before,
 .figure__frame::after {

@@ -22,17 +22,18 @@ export default function Home() {
 
           <div className="home-hero__grid">
             <div className="home-hero__copy fade-up">
-              <p className="eyebrow">Non-Chemical Scale Prevention</p>
+              <p className="eyebrow">Passive Inline Water Conditioning</p>
               <h1 className="display">
-                Engineering clean<br />water. <em>Sustaining</em><br />energy. Without<br />chemicals.
+                Non-Chemical Scale<br />Prevention for <em>Cooling</em><br />Towers &amp; Chiller Plants
               </h1>
               <p className="lead">
-                ScaleGuard is a passive, inline water conditioning system that helps prevent
-                scale formation in cooling towers, chiller plants and condenser water circuits.
-                No chemicals. No electricity. Minimal maintenance.
+                ScaleGuard is a passive, inline water conditioning device installed across 300+
+                HVAC systems in India — from institutional chiller plants to government, hospital
+                and railway cooling towers — preventing scale without chemicals, electricity, or
+                moving parts.
               </p>
               <div className="home-hero__actions">
-                <Link to="/contact" className="btn btn--primary">Get a Free Site Assessment →</Link>
+                <Link to="/contact" className="btn btn--primary">Request Technical Presentation →</Link>
                 <Link to="/how-it-works" className="btn btn--ghost">See How It Works</Link>
               </div>
             </div>
@@ -40,12 +41,22 @@ export default function Home() {
             <div className="home-hero__media">
               <Figure
                 src={IMG.coolingTowers}
-                alt="Institutional chiller plant cooling towers at dusk"
+                alt="ScaleGuard unit installed on a condenser water line at an institutional chiller plant"
                 ratio="4 / 3"
-                caption="A 2,400 TR chiller plant — typical of the institutional installations served since 1989."
+                caption="Installed in HVAC systems up to 2,400+ TR capacity."
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ---------- Credibility strip ---------- */}
+      <section className="section--paper home-credibility">
+        <div className="container home-credibility__inner">
+          <span>Serving the HVAC Industry Since 1989</span>
+          <span className="home-credibility__points">
+            25+ Years Experience · No Chemicals · No Electricity · No Maintenance
+          </span>
         </div>
       </section>
 
@@ -73,12 +84,12 @@ export default function Home() {
               <p className="muted">
                 Scale deposits on heat transfer surfaces reduce efficiency, increase energy
                 consumption, and shorten equipment life. Traditional chemical treatment programs
-                involve ongoing costs, handling hazards, and environmental considerations.
+                involve ongoing dosing, handling, and monitoring at every plant room.
               </p>
               <p className="muted">
                 ScaleGuard offers a non-chemical alternative using nano-material principles to
                 condition water — keeping condensers, chillers, and cooling towers operating
-                closer to their design efficiency.
+                closer to their design efficiency across HVAC installations of every scale.
               </p>
             </div>
           </div>
@@ -96,10 +107,10 @@ export default function Home() {
             <Link to="/benefits" className="home-link">All benefits →</Link>
           </div>
 
-          <div className="grid grid-4 home-benefits__grid">
+          <div className="home-benefits__grid home-benefits__grid--5">
             {BENEFIT_TILES.map((t) => (
               <div className="tile" key={t.title}>
-                <span className="tile__icon" aria-hidden>◆</span>
+                <span className="tile__icon" aria-hidden>{t.icon}</span>
                 <h3 className="tile__title">{t.title}</h3>
                 <p className="tile__body">{t.body}</p>
               </div>
@@ -131,10 +142,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Proven band ---------- */}
+      {/* ---------- Trusted installations ---------- */}
       <section className="section--navy section--tight">
         <div className="container">
-          <p className="eyebrow eyebrow--muted">Proven in Critical Infrastructure</p>
+          <p className="eyebrow eyebrow--muted">Trusted Installations</p>
           <div className="home-proven">
             {PROVEN.map((p) => (
               <span className="home-proven__item" key={p}>{p}</span>

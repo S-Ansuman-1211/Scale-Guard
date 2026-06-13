@@ -156,6 +156,54 @@
 .cert__title { font-size: 1.18rem; color: var(--navy-800); margin-bottom: 8px; }
 .cert__note { font-family: var(--mono); font-size: 0.74rem; color: var(--steel); line-height: 1.5; letter-spacing: 0.01em; }
 
+/* Project gallery */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.project-card { margin: 0; }
+
+.project-card__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+}
+.project-card__frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.project-card:hover .project-card__frame img { transform: scale(1.04); }
+
+.project-card__body { display: block; margin-top: 12px; }
+.project-card__title {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.project-card__capacity,
+.project-card__pmc {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--steel);
+  line-height: 1.5;
+}
+.project-card__pmc { color: var(--slate); }
+
 /* Table wrapper */
 .tablewrap { border: 1px solid var(--line); overflow-x: auto; }
 
@@ -222,6 +270,8 @@
   .downloads { grid-template-columns: 1fr; }
   .download { border-right: 0; }
   .download:last-child { border-bottom: 0; }
+
+  .project-gallery { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
@@ -229,6 +279,8 @@
   .cert { border-right: 0 !important; }
   .steps { grid-template-columns: 1fr; }
   .step { border-right: 0; }
+
+  .project-gallery { grid-template-columns: 1fr; }
 
   .rowitem {
     grid-template-columns: 40px 1fr;

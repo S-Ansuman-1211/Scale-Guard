@@ -10,7 +10,7 @@ export const NAV_LINKS = [
   { label: 'Applications', to: '/applications' },
   { label: 'Benefits', to: '/benefits' },
   { label: 'Projects', to: '/projects' },
-  { label: 'Consultants', to: '/consultants' },
+  { label: 'For Consultants', to: '/consultants' },
   { label: 'Downloads', to: '/downloads' },
   { label: 'Contact', to: '/contact' },
 ]
@@ -24,20 +24,29 @@ export const STATS = [
 
 export const BENEFIT_TILES = [
   {
-    title: 'No chemical dosing',
+    icon: '⚗',
+    title: 'No Chemicals',
     body: 'Zero treatment chemicals to procure, store, or discharge.',
   },
   {
-    title: 'No external power',
-    body: 'Passive operation with zero electricity consumption.',
+    icon: '⚡',
+    title: 'No Electricity',
+    body: 'Fully passive operation with zero power consumption.',
   },
   {
-    title: 'No moving parts',
-    body: 'Solid-state device with nothing to wear or replace.',
+    icon: '⚙',
+    title: 'No Maintenance',
+    body: 'Solid-state device with nothing to wear, service, or replace.',
   },
   {
-    title: 'Inline installation',
-    body: 'Flanged into the condenser line with minimal disruption.',
+    icon: '⇄',
+    title: 'Easy Retrofit',
+    body: 'Flanged inline installation with minimal disruption to existing piping.',
+  },
+  {
+    icon: '♻',
+    title: 'Environment Friendly',
+    body: 'No chemical discharge and a reduced lifecycle environmental footprint.',
   },
 ]
 
@@ -58,11 +67,14 @@ export const CASE_STUDY = {
 }
 
 export const PROVEN = [
+  'IITs (Jodhpur & Delhi)',
+  'AIIMS Delhi',
+  'Nanavati Hospital',
+  'Indian Railways',
+  'IICC Dwarka',
+  'Defence Establishments',
   'Parliament House',
   'Supreme Court',
-  'AIIMS Delhi',
-  'IIT Jodhpur',
-  'CPWD Projects',
 ]
 
 /* ---------------- About ---------------- */
@@ -170,20 +182,56 @@ export const COMPARISON = {
 export const INSTALLATION_GROUPS = [
   {
     title: 'Government / CPWD',
-    items: ['Parliament House', 'Supreme Court of India', "Prime Minister's Office", 'Various Ministries'],
+    items: ['Parliament House', 'Supreme Court of India', "Prime Minister's Office", 'Danish Embassy, Delhi', 'Various Ministries'],
   },
   {
     title: 'Healthcare',
-    items: ['AIIMS Delhi', 'Safdarjung Hospital', 'GTB Hospital', 'G.B. Pant Hospital'],
+    items: [
+      'AIIMS Delhi, GB Pant & Safdarjung', 'AIIMS Bhatinda, Gorakhpur & Guwahati',
+      'ILBS Hospital, Vasant Kunj', 'Lady Hardinge Medical College', 'LNJP Hospital, Delhi',
+      'Kalpana Chawla Hospital, Karnal', 'Civil Hospital, Ahmedabad', 'R.N. Cooper Hospital, Mumbai',
+      'PGIMS, Rohtak',
+    ],
   },
   {
     title: 'Education',
-    items: ['IIT Jodhpur', 'IIT Delhi', 'Lady Hardinge Medical College'],
+    items: ['IIT Jodhpur', 'IIT Delhi', 'IIT Ropar', 'IIT Mandi', 'Amity University, Noida', 'South Asian University, Delhi'],
   },
   {
     title: 'Infrastructure & Defence',
-    items: ['NBCC Dwarka', 'Defence facilities', 'Airport terminals'],
+    items: [
+      'India International Convention Centre, Dwarka', 'Kashmiri Gate Metro Station, Delhi',
+      'HUDA City Centre Metro, Gurgaon', 'Jammu Airport', 'Omaxe CP Mall, Greater Noida',
+      'Defence facilities', 'Airport terminals',
+    ],
   },
+]
+
+export const RECENT_INSTALLATIONS = [
+  { name: 'ILBS Hospital, Vasant Kunj, Delhi', capacity: '3 × 300 TR', pmc: 'PMC – DMRC', img: '/images/projects/ilbs-hospital-vasant-kunj.jpg' },
+  { name: 'Lady Hardinge Medical College, Delhi', capacity: '5 × 425 TR', pmc: 'PMC – HSCC', img: '/images/projects/lady-hardinge-medical-college.jpg' },
+  { name: 'AIIMS, Mother & Child Block, Delhi', capacity: '5 × 500 TR', pmc: 'PMC – HSCC', img: '/images/projects/aiims-mother-child-block-delhi.jpg' },
+  { name: 'LNJP Orthopaedic Block, Delhi', capacity: '5 × 120 TR', pmc: 'PMC – PWD, Delhi', img: '/images/projects/lnjp-orthopaedic-block-delhi.jpg' },
+  { name: 'Amity University, Noida', capacity: '3 × 1000 TR', pmc: 'Client – Amity', img: '/images/projects/amity-university-noida.jpg' },
+  { name: 'GB Pant Hospital, Delhi', capacity: '5 × 120 TR, 4 × 150 TR', pmc: 'PMC – PWD, Delhi', img: '/images/projects/gb-pant-hospital-delhi.jpg' },
+  { name: 'Kashmiri Gate Metro Station, Delhi', capacity: '3 × 400 TR', pmc: 'PMC – DMRC', img: '/images/projects/kashmiri-gate-metro-station.jpg' },
+  { name: 'IIT Delhi', capacity: '3 × 350 TR', pmc: 'PMC – CPWD', img: '/images/projects/iit-delhi.jpg' },
+  { name: 'IIT Ropar', capacity: '3 × 600 TR', pmc: 'PMC – CPWD', img: '/images/projects/iit-ropar.jpg' },
+  { name: 'IIT Mandi', capacity: '3 × 275 TR', pmc: 'PMC – NBCC', img: '/images/projects/iit-mandi.jpg' },
+  { name: 'AIIMS, Bhatinda', capacity: '5 × 575 TR', pmc: 'PMC – HLL', img: '/images/projects/aiims-bhatinda.jpg' },
+  { name: 'AIIMS, Gorakhpur', capacity: '5 × 500 TR', pmc: 'PMC – HLL', img: '/images/projects/aiims-gorakhpur.jpg' },
+  { name: 'Omaxe CP Mall, Greater Noida', capacity: '7 × 850 TR', pmc: 'Client – Omaxe', img: '/images/projects/omaxe-cp-mall-greater-noida.jpg' },
+  { name: 'Kalpana Chawla Hospital, Karnal', capacity: '3 × 250 TR', pmc: 'PMC – HSCC', img: '/images/projects/kalpana-chawla-hospital-karnal.jpg' },
+  { name: 'Civil Hospital, Ahmedabad', capacity: '3 × 200 TR', pmc: 'Client – PWD, Gujarat', img: '/images/projects/civil-hospital-ahmedabad.jpg' },
+  { name: 'AIIMS, Guwahati', capacity: '5 × 650 TR', pmc: 'PMC – HLL', img: '/images/projects/aiims-guwahati.jpg' },
+  { name: 'R.N. Cooper Hospital, Mumbai', capacity: '3 × 320 TR', pmc: 'PMC – MCG, Mumbai', img: '/images/projects/rn-cooper-hospital-mumbai.jpg' },
+  { name: 'PGIMS, Rohtak', capacity: '3 × 300 TR', pmc: 'PMC – PGIMS', img: '/images/projects/pgims-rohtak.jpg' },
+  { name: 'Jammu Airport', capacity: '3 × 200 TR', pmc: 'PMC – AAI', img: '/images/projects/jammu-airport.jpg' },
+  { name: 'Danish Embassy, Delhi', capacity: '2 × 150 TR', pmc: 'PMC – CPWD', img: '/images/projects/danish-embassy-delhi.jpg' },
+  { name: 'South Asian University, Delhi', capacity: '4 × 1000 TR', pmc: 'Client – SAU', img: '/images/projects/south-asian-university-delhi.jpg' },
+  { name: 'Supreme Court of India', capacity: '4 × 550 TR', pmc: 'PMC – CPWD', img: '/images/projects/supreme-court-of-india.jpg' },
+  { name: 'India International Convention Centre, Delhi', capacity: '6 × 2000 TR', pmc: 'PMC – AECOM', img: '/images/projects/iicc-delhi.jpg' },
+  { name: 'HUDA City Centre, Gurgaon', capacity: '3 × 235 TR', pmc: 'PMC – DMRC', img: '/images/projects/huda-city-centre-gurgaon.jpg' },
 ]
 
 export const PROJECT_SUMMARY = {
@@ -217,6 +265,13 @@ export const CONSULTANT_BLOCKS = [
   },
 ]
 
+export const CONSULTANT_RESOURCES = [
+  { title: 'BOQ Specifications', note: 'Bill-of-quantity line items in CPWD/PWD tender format.', to: '/contact', cta: 'Request via Contact' },
+  { title: 'CAD Drawings', note: 'Flange, spool, and installation drawings for design coordination.', to: '/contact', cta: 'Request via Contact' },
+  { title: 'Technical Datasheets', note: 'Sizing tables, specifications, and certifications.', to: '/downloads', cta: 'Go to Downloads' },
+  { title: 'Reference Projects', note: 'Installed sites across government, healthcare, education, and rail.', to: '/projects', cta: 'View Projects' },
+]
+
 export const KEY_PARAMETERS = {
   head: ['Parameter', 'Value'],
   rows: [
@@ -235,12 +290,8 @@ export const KEY_PARAMETERS = {
 
 /* ---------------- Downloads ---------------- */
 export const DOWNLOADS = [
-  { title: 'Company Brochure', note: 'Overview of ScaleGuard products and applications.', meta: 'PDF · 2.4 MB', file: '/docs/company-brochure.pdf' },
-  { title: 'Technical Data Sheet', note: 'Specifications, sizing tables, and pressure-drop charts.', meta: 'PDF · 1.1 MB', file: '/docs/technical-data-sheet.pdf' },
-  { title: 'Case Study — IIT Jodhpur', note: '2,400 TR chiller plant savings analysis.', meta: 'PDF · 850 KB', file: '/docs/case-study-iit-jodhpur.pdf' },
-  { title: 'Tender Specifications', note: 'CPWD-format technical specs for procurement.', meta: 'PDF · 720 KB', file: '/docs/tender-specifications.pdf' },
-  { title: 'Comparison Document', note: 'Chemical treatment vs ScaleGuard analysis.', meta: 'PDF · 640 KB', file: '/docs/comparison-document.pdf' },
-  { title: 'Installation Guidelines', note: 'Site preparation and commissioning protocols.', meta: 'PDF · 980 KB', file: '/docs/installation-guidelines.pdf' },
+  { title: 'Product Catalogue', note: 'Full ScaleGuard product range, applications and specifications.', meta: 'PDF · 1.3 MB', file: '/docs/scaleguard-catalogue.pdf' },
+  { title: 'ISO 9001 Certificate', note: 'Aqua Treat Pvt. Ltd. quality management certification.', meta: 'PDF · 1.5 MB', file: '/docs/aqua-treat-iso-9001-certificate.pdf' },
 ]
 
 /* ---------------- Contact / external links ---------------- */

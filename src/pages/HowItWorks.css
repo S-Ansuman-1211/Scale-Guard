@@ -1,0 +1,21 @@
+/* Mechanism diagram block */
+.hiw-diagram {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.hiw-diagram__fig {
+  max-width: 560px;
+  width: 100%;
+}
+
+.hiw-diagram__notes { display: grid; gap: 20px; }
+
+.hiw-diagram__notes .ticklist li strong { color: var(--navy-800); font-weight: 600; }
+
+@media (max-width: 880px) {
+  .hiw-diagram { grid-template-columns: 1fr; gap: 36px; }
+  .hiw-diagram__fig { max-width: 480px; margin: 0 auto; }
+}

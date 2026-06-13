@@ -15,7 +15,7 @@
 .nav__inner {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   height: 72px;
 }
 
@@ -75,10 +75,10 @@
   font-family: var(--sans);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  padding: 8px 11px;
+  padding: 8px 8px;
   position: relative;
   transition: color 0.15s ease;
   white-space: nowrap;
@@ -91,8 +91,8 @@
 .nav__link.is-active::after {
   content: '';
   position: absolute;
-  left: 11px;
-  right: 11px;
+  left: 8px;
+  right: 8px;
   bottom: 2px;
   height: 2px;
   background: var(--steel);
@@ -109,7 +109,12 @@
   flex-shrink: 0;
 }
 
-.nav__cta { padding: 12px 22px; }
+.nav__cta {
+  padding: 12px 16px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
 
 /* ---------- Burger ---------- */
 .nav__burger {
@@ -147,11 +152,7 @@
 }
 
 /* ---------- Breakpoints ---------- */
-@media (max-width: 1120px) {
-  .nav__link { padding: 8px 9px; letter-spacing: 0.05em; }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1180px) {
   .nav__cta { display: none; }
   .nav__burger { display: flex; }
   .nav__backdrop { display: block; }
