@@ -179,34 +179,6 @@ export const COMPARISON = {
 }
 
 /* ---------------- Projects ---------------- */
-export const INSTALLATION_GROUPS = [
-  {
-    title: 'Government / CPWD',
-    items: ['Parliament House', 'Supreme Court of India', "Prime Minister's Office", 'Danish Embassy, Delhi', 'Various Ministries'],
-  },
-  {
-    title: 'Healthcare',
-    items: [
-      'AIIMS Delhi, GB Pant & Safdarjung', 'AIIMS Bhatinda, Gorakhpur & Guwahati',
-      'ILBS Hospital, Vasant Kunj', 'Lady Hardinge Medical College', 'LNJP Hospital, Delhi',
-      'Kalpana Chawla Hospital, Karnal', 'Civil Hospital, Ahmedabad', 'R.N. Cooper Hospital, Mumbai',
-      'PGIMS, Rohtak',
-    ],
-  },
-  {
-    title: 'Education',
-    items: ['IIT Jodhpur', 'IIT Delhi', 'IIT Ropar', 'IIT Mandi', 'Amity University, Noida', 'South Asian University, Delhi'],
-  },
-  {
-    title: 'Infrastructure & Defence',
-    items: [
-      'India International Convention Centre, Dwarka', 'Kashmiri Gate Metro Station, Delhi',
-      'HUDA City Centre Metro, Gurgaon', 'Jammu Airport', 'Omaxe CP Mall, Greater Noida',
-      'Defence facilities', 'Airport terminals',
-    ],
-  },
-]
-
 export const RECENT_INSTALLATIONS = [
   { name: 'ILBS Hospital, Vasant Kunj, Delhi', capacity: '3 × 300 TR', pmc: 'PMC – DMRC', img: '/images/projects/ilbs-hospital-vasant-kunj.jpg' },
   { name: 'Lady Hardinge Medical College, Delhi', capacity: '5 × 425 TR', pmc: 'PMC – HSCC', img: '/images/projects/lady-hardinge-medical-college.jpg' },
@@ -233,17 +205,6 @@ export const RECENT_INSTALLATIONS = [
   { name: 'India International Convention Centre, Delhi', capacity: '6 × 2000 TR', pmc: 'PMC – AECOM', img: '/images/projects/iicc-delhi.jpg' },
   { name: 'HUDA City Centre, Gurgaon', capacity: '3 × 235 TR', pmc: 'PMC – DMRC', img: '/images/projects/huda-city-centre-gurgaon.jpg' },
 ]
-
-export const PROJECT_SUMMARY = {
-  head: ['Sector', 'No. of Projects', 'Key References'],
-  rows: [
-    ['Government / CPWD', '80+', 'Parliament House, Supreme Court, PMO'],
-    ['Healthcare', '60+', 'AIIMS, Safdarjung, GTB'],
-    ['Education', '40+', 'IIT Jodhpur, IIT Delhi'],
-    ['Industrial', '70+', 'Process cooling installations'],
-    ['Infrastructure', '50+', 'NBCC Dwarka, airports, defence'],
-  ],
-}
 
 /* ---------------- Consultants ---------------- */
 export const CONSULTANT_BLOCKS = [
@@ -295,12 +256,12 @@ export const DOWNLOADS = [
 ]
 
 /* ---------------- Contact / external links ---------------- */
-export const PHONE_DISPLAY = '+91 99999 99999'
-export const PHONE_TEL = 'tel:+919999999999'
+export const PHONE_DISPLAY = '+91 98100 23754'
+export const PHONE_TEL = 'tel:+919810023754'
 export const EMAIL = 'info@scaleguard.in'
 export const EMAIL_MAILTO = 'mailto:info@scaleguard.in'
 export const WHATSAPP_URL =
-  'https://wa.me/919999999999?text=Hello%20ScaleGuard%2C%20I%27d%20like%20a%20technical%20proposal.'
+  'https://wa.me/919810023754?text=Hello%20ScaleGuard%2C%20I%27d%20like%20a%20technical%20proposal.'
 
 export const CONTACT_INFO = [
   { label: 'Phone', value: PHONE_DISPLAY, href: PHONE_TEL },

@@ -42,7 +42,7 @@ export default function Home() {
               <Figure
                 src={IMG.coolingTowers}
                 alt="ScaleGuard unit installed on a condenser water line at an institutional chiller plant"
-                ratio="4 / 3"
+                ratio="3 / 4"
                 caption="Installed in HVAC systems up to 2,400+ TR capacity."
               />
             </div>
