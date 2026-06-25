@@ -10,7 +10,6 @@ import Applications from './pages/Applications'
 import Benefits from './pages/Benefits'
 import Projects from './pages/Projects'
 import Consultants from './pages/Consultants'
-import Downloads from './pages/Downloads'
 import Contact from './pages/Contact'
 
 export default function App() {
@@ -27,7 +26,6 @@ export default function App() {
           <Route path="/benefits" element={<Benefits />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/consultants" element={<Consultants />} />
-          <Route path="/downloads" element={<Downloads />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

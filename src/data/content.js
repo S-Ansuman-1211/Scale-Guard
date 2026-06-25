@@ -11,7 +11,6 @@ export const NAV_LINKS = [
   { label: 'Benefits', to: '/benefits' },
   { label: 'Projects', to: '/projects' },
   { label: 'For Consultants', to: '/consultants' },
-  { label: 'Downloads', to: '/downloads' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -60,8 +59,8 @@ export const CASE_STUDY = {
     ['Treatment', 'ScaleGuard inline conditioning (condenser circuit)'],
     ['Measurement Approach', 'Conservative comparative methodology'],
     ['Observed Energy Reduction', '~5% in electricity consumption'],
-    ['Annual Savings', '₹30.6 Lakhs'],
-    ['Installation Cost', '₹73.5 Lakhs'],
+    ['Annual Savings', '₹17 Lakhs'],
+    ['Installation Cost', '₹40 Lakhs'],
     ['Payback Period', '~2 years 4 months'],
   ],
 }
@@ -229,7 +228,7 @@ export const CONSULTANT_BLOCKS = [
 export const CONSULTANT_RESOURCES = [
   { title: 'BOQ Specifications', note: 'Bill-of-quantity line items in CPWD/PWD tender format.', to: '/contact', cta: 'Request via Contact' },
   { title: 'CAD Drawings', note: 'Flange, spool, and installation drawings for design coordination.', to: '/contact', cta: 'Request via Contact' },
-  { title: 'Technical Datasheets', note: 'Sizing tables, specifications, and certifications.', to: '/downloads', cta: 'Go to Downloads' },
+  { title: 'Technical Datasheets', note: 'Sizing tables, specifications, and certifications.', to: '/contact', cta: 'Request via Contact' },
   { title: 'Reference Projects', note: 'Installed sites across government, healthcare, education, and rail.', to: '/projects', cta: 'View Projects' },
 ]
 
@@ -256,8 +255,8 @@ export const DOWNLOADS = [
 ]
 
 /* ---------------- Contact / external links ---------------- */
-export const PHONE_DISPLAY = '+91 98100 23754'
-export const PHONE_TEL = 'tel:+919810023754'
+export const PHONE_DISPLAY = '+91 91757 23754'
+export const PHONE_TEL = 'tel:+919175723754'
 export const EMAIL = 'info@scaleguard.in'
 export const EMAIL_MAILTO = 'mailto:info@scaleguard.in'
 export const WHATSAPP_URL =

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
-import { CONSULTANT_BLOCKS, CONSULTANT_RESOURCES, KEY_PARAMETERS } from '../data/content'
+import { CONSULTANT_BLOCKS, CONSULTANT_RESOURCES, KEY_PARAMETERS, DOWNLOADS } from '../data/content'
 import './pages.css'
 
 export default function Consultants() {
@@ -63,6 +63,36 @@ export default function Consultants() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      {/* Downloads */}
+      <section className="section">
+        <div className="container">
+          <p className="eyebrow">Downloads</p>
+          <h2 className="h-section sec-head">Documentation Library</h2>
+          <div className="downloads">
+            {DOWNLOADS.map((d) => (
+              <div className="download" key={d.title}>
+                <span className="download__icon" aria-hidden>▤</span>
+                <div className="download__body">
+                  <h3 className="download__title">{d.title}</h3>
+                  <p className="download__note">{d.note}</p>
+                  <span className="download__meta">{d.meta}</span>
+                </div>
+                <a
+                  className="download__dl"
+                  href={d.file}
+                  download
+                  aria-label={`Download ${d.title}`}
+                >↓</a>
+              </div>
+            ))}
+          </div>
+
+          <p className="muted small" style={{ marginTop: 24 }}>
+            Need something specific for a tender? <Link to="/contact" className="text-steel">Request via Contact</Link>.
+          </p>
         </div>
       </section>
     </div>

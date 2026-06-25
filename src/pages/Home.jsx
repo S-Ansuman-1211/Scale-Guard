@@ -22,7 +22,7 @@ export default function Home() {
 
           <div className="home-hero__grid">
             <div className="home-hero__copy fade-up">
-              <p className="eyebrow">Passive Inline Water Conditioning</p>
+              <p className="eyebrow">Passive On-line Water Conditioning</p>
               <h1 className="display">
                 Non-Chemical Scale<br />Prevention for <em>Cooling</em><br />Towers &amp; Chiller Plants
               </h1>
@@ -127,7 +127,7 @@ export default function Home() {
           </div>
           <div className="home-case__copy">
             <p className="eyebrow">Featured Case Study</p>
-            <h2 className="h-section">IIT Jodhpur — 2,400 TR chiller plant.</h2>
+            <h2 className="h-section">2,400 TR chiller plant.</h2>
             <p className="muted home-case__intro">{CASE_STUDY.intro}</p>
             <dl className="home-case__rows">
               {caseRows.map(([k, v]) => (
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
             <div className="home-cta__actions">
               <Link to="/contact" className="btn btn--primary">Request Technical Proposal</Link>
-              <Link to="/downloads" className="btn btn--ghost">Download Brochure</Link>
+              <Link to="/consultants" className="btn btn--ghost">Download Brochure</Link>
             </div>
           </div>
         </div>

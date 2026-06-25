@@ -17,7 +17,6 @@ const COLUMNS = [
     links: [
       { label: 'About', to: '/about' },
       { label: 'For Consultants', to: '/consultants' },
-      { label: 'Downloads', to: '/downloads' },
       { label: 'Contact', to: '/contact' },
     ],
   },
