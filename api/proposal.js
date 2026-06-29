@@ -1,5 +1,3 @@
-import nodemailer from 'nodemailer'
-
 const TO_ADDRESS = 'info@scaleguard.in'
 
 function escapeHtml(str = '') {
@@ -23,27 +21,12 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Full name and email are required.' })
   }
 
-  const {
-    SMTP_HOST,
-    SMTP_PORT,
-    SMTP_USER,
-    SMTP_PASS,
-    SMTP_FROM,
-  } = process.env
+  const { RESEND_API_KEY, MAIL_FROM } = process.env
 
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    console.error('SMTP environment variables are not configured.')
+  if (!RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not configured.')
     return res.status(500).json({ error: 'Email service is not configured.' })
   }
-
-  const port = Number(SMTP_PORT) || 587
-
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port,
-    secure: port === 465, // true for 465, false for 587/STARTTLS
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-  })
 
   const rows = [
     ['Full Name', fullName],
@@ -71,14 +54,30 @@ export default async function handler(req, res) {
   const text = rows.map(([label, value]) => `${label}: ${value || '—'}`).join('\n')
 
   try {
-    await transporter.sendMail({
-      from: SMTP_FROM || SMTP_USER,
-      to: TO_ADDRESS,
-      replyTo: email,
-      subject: `Proposal request — ${fullName}${organisation ? ` (${organisation})` : ''}`,
-      text,
-      html,
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        // Must be an address on a domain verified in Resend (e.g. proposals@scaleguard.in).
+        // Falls back to Resend's shared test sender, which only delivers to your own account email.
+        from: MAIL_FROM || 'onboarding@resend.dev',
+        to: [TO_ADDRESS],
+        reply_to: email,
+        subject: `Proposal request — ${fullName}${organisation ? ` (${organisation})` : ''}`,
+        text,
+        html,
+      }),
     })
+
+    if (!response.ok) {
+      const detail = await response.text()
+      console.error('Resend API error:', response.status, detail)
+      return res.status(502).json({ error: 'Failed to send email.' })
+    }
+
     return res.status(200).json({ ok: true })
   } catch (err) {
     console.error('Failed to send proposal email:', err)
