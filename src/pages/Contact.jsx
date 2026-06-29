@@ -6,7 +6,7 @@ import './Contact.css'
 
 export default function Contact() {
   const dispatch = useDispatch()
-  const { form, status } = useSelector((s) => s.contact)
+  const { form, status, error } = useSelector((s) => s.contact)
 
   const set = (field) => (e) =>
     dispatch(updateField({ field, value: e.target.value }))
@@ -88,6 +88,7 @@ export default function Contact() {
                     onChange={set('details')}
                   />
                 </div>
+                {error && <p className="contact__error">{error}</p>}
                 <button className="btn btn--primary btn--block" disabled={status === 'submitting'}>
                   {status === 'submitting' ? 'Sending…' : 'Request Technical Proposal'}
                 </button>

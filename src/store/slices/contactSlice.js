@@ -49,12 +49,19 @@ export const {
   resetForm,
 } = contactSlice.actions
 
-// Thunk that simulates an async submission. Replace with a real API call later.
+// Posts the form to the serverless function, which emails info@scaleguard.in.
 export const submitContactForm = (form) => async (dispatch) => {
   dispatch(submitStart())
   try {
-    await new Promise((resolve) => setTimeout(resolve, 700))
-    // TODO: POST `form` to backend endpoint here.
+    const res = await fetch('/api/proposal', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}))
+      throw new Error(data.error || 'Request failed.')
+    }
     dispatch(submitSuccess())
   } catch (err) {
     dispatch(submitError(err.message || 'Something went wrong.'))

@@ -86,6 +86,12 @@ textarea.field__input { resize: vertical; }
 
 .contact__thanks-title { font-size: 1.5rem; color: var(--navy-800); }
 
+.contact__error {
+  margin: 0 0 4px;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 820px) {
   .contact { grid-template-columns: 1fr; gap: 36px; }
   .contact__row { grid-template-columns: 1fr; }
